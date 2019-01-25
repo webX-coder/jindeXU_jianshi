@@ -1,0 +1,410 @@
+html{
+	width: 100%;
+	height: 100%;
+}
+body{
+	background: url('../img/bg.png')no-repeat center;
+	zoom: 1;
+	width: 100%;
+    height: 100%;
+    /*background-color: #14669c;       */
+}
+/*头部*/
+.expert-nav{
+	overflow: hidden;
+	width: 100%;
+	height: 80px;
+	margin-bottom: 40px;
+}
+.navTit,.expert-nav ul.navList{
+	float: left;
+	overflow: hidden;
+	text-align: center;
+}
+.navTit{
+	width: 286px;	
+	height: 100%;
+	line-height: 73px;
+	background: url('../img/expert/navTit.png')no-repeat center;	
+	background-size: 100% 100%;
+	font-family: Microsoft YaHei;
+	font-size: 24px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 2px;
+	color: #afecff;	
+	text-align: left;
+	padding-left: 29px;
+}
+ul.navList{
+	position: relative;
+	left: -20px;
+}
+ul.navList li{
+	position: relative;
+	float: left;
+	width: 195px;
+	height: 60px;
+	line-height: 55px;
+	background: url('../img/expert/navBox.png')no-repeat center;	
+	background-size: 100% 100%;	
+}
+ul.navList li.active{
+	background: url('../img/expert/navBoxShow.png')no-repeat center;	
+}
+ul.navList li:nth-child(1){
+    left: 5px;	
+}
+ul.navList li:nth-child(2){
+    left: -10px;	
+}
+ul.navList li:nth-child(3){
+    left: -25px;	
+}
+ul.navList li a{
+	font-family: Microsoft YaHei;
+	font-size: 24px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 2px;
+	color: #afecff;
+}
+/*内容部分*/
+.expert-content{
+	zoom: 1;
+	margin: auto;
+}
+.expert-content>div{
+	float: left;
+	padding: 30px;
+}
+/*内容左侧*/
+.content-left{
+	width: 62.5%;
+	height: 920px;
+	background-color: rgb(22,105,144,.3);
+	box-shadow: inset 0px 0px 6px 0px rgba(4, 0, 0, 0.35);
+	border-radius: 6px;
+	margin: 0 1.56% 0 3.645%;	
+}
+.contentTit{
+	width: 100%;
+	height: 80px;
+	line-height: 80px;
+	background-color: #112d3d;
+	border-radius: 6px 6px 0px 0px;	
+	font-family: Microsoft YaHei;
+	font-size: 24px;
+	font-weight: bold;
+	font-stretch: normal;
+	letter-spacing: 2px;
+	color: #afecff;
+	text-align: center;
+	background: url('../img/expert/3.png')no-repeat 100% center;	
+	background-size: 100% 100%;	    
+}
+.left-activity{
+	zoom: 1;
+	width: 100%;
+	height: 780px;
+	padding: 0 45px;
+	overflow-y: auto;
+}
+.left-activity::-webkit-scrollbar,.right-activity::-webkit-scrollbar,.right-dataBase::-webkit-scrollbar{/*滚动条整体样式*/
+    width: 12px;     /*高宽分别对应横竖滚动条的尺寸*/
+}
+.left-activity::-webkit-scrollbar-thumb,.right-activity::-webkit-scrollbar-thumb,.right-dataBase::-webkit-scrollbar-thumb{/*滚动条里面小方块*/
+    border-radius: 6px;
+	background-color: #112d3d;
+}
+.left-activity li{
+	position: relative;
+	float: left;
+	width: 100%;
+	height: 100px;
+	margin-top: 30px;
+	cursor:pointer;
+	padding: 0 45px;
+}
+.iocLeft,.iocRight{
+	position: absolute;
+	display: inline-block;
+	width: 45px;
+	height: 100%;	
+	top: 0;	
+	background-size: 100% 100%;			
+}
+.iocLeft{
+	left: 0;
+	background: url('../img/expert/leftBorder.png')no-repeat center;	
+}
+.iocRight{
+	right: 0;
+	background: url('../img/expert/rightBorder.png')no-repeat center;	
+}
+.left-activity li .activityTit{
+	width: 100%;
+	height: 100%;	
+	background: url('../img/expert/liBg.png')no-repeat;		
+	padding: 17px 40px 0 40px;
+	box-shadow: 0px 0px 10px 0px rgba(4, 0, 0, 0.41);
+	-webkit-transition: all .3s;		
+	background-size: 100% 100% !important;	 		
+}
+.left-activity li.active .activityTit{
+	background: url('../img/expert/liBgShow.png')no-repeat ;	
+}
+.activityTit p:first-child{
+	font-family: Microsoft YaHei;
+	font-size: 20px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 28px;
+	letter-spacing: 0px;
+	color: #e0f4fc;	
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;	
+    text-align: left;
+    margin-bottom: 4px;
+}
+.activityTit p:last-child{
+	font-family: Microsoft YaHei;
+	font-size: 18px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 28px;
+	letter-spacing: 0px;
+	color: #e0f4fc;	
+	text-align: right;
+}
+/*内容右侧*/
+.content-right{
+	width: 28.64%;
+	height: 920px;
+	background-color: rgb(22,105,144,.3);
+	box-shadow: inset 0px 0px 6px 0px rgba(4, 0, 0, 0.35);
+	border-radius: 6px;	
+}
+.right-activity{
+	overflow: hidden;
+	zoom: 1;
+	width: 100%;
+	height: 760px;
+	padding: 0 8.247%;
+	overflow-y: auto;
+}
+		/*专家内容显示区*/
+.right-activity li{
+	float: left;
+	width: 100%;
+	height: 220px;
+	background-color: rgb(14,65,111,6);
+	box-shadow: 0px 4px 10px 0px rgba(4, 0, 0, 0.5);
+	margin-top: 30px;
+	padding: 36px 0 36px 10.695%;
+	overflow: hidden;
+	zoom: 1;
+	cursor:pointer;
+	-webkit-transition: all .3s;
+}
+.right-activity li>div{
+	float: left;
+}
+.right-activity li .rightImg{
+	width: 34.88%;
+	height: 148px;
+	margin-right: 3%;	
+}
+.rightImg img{
+	width: 100%;
+	height: 100%;
+}
+.rightTxt{
+	width: 58.23%;
+	overflow: hidden;
+}
+.rightTxt p{
+	width: 100%;
+	height: 16px;
+	line-height: 16px;
+	font-family: Microsoft YaHei;
+	font-size: 16px;
+	letter-spacing: 0px;
+	color: #afecff;
+	margin-top: 19px;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.rightTxt p:first-child{
+	margin-top: 9px;	
+}
+.rightTxt span{
+	font-weight: bold;
+	font-stretch: normal;
+	color: #e0f4fc;	
+}
+.right-activity li.active{
+	background-color: rgb(18,63,89,6);
+}
+		/*数据库内容显示区*/
+.right-dataBase{
+	overflow: hidden;
+	zoom: 1;
+	text-align: center;
+    overflow-y: auto;	
+}	
+.right-dataBase li{
+	position: relative;
+	width: 319px;
+	height: 80px;
+	line-height: 80px;
+	margin: 70px auto auto auto;
+	background: url('../img/dataBase/dataBase.png')no-repeat 100% center;	
+	text-align: center;
+	font-family: Microsoft YaHei;
+	font-size: 24px;
+	font-weight: bold;
+	font-stretch: normal;
+	letter-spacing: 2px;
+	color: #afecff;
+	cursor:pointer;
+	-webkit-transition: all .3s;	
+}	
+.right-dataBase li.active{
+	background: url('../img/dataBase/dataBaseShow.png')no-repeat 100% center;		
+}
+.right-dataBase li b{
+	position: absolute;
+	left: -10px;
+	top: -10px;
+	display: inline-block;
+	width: 98px;
+	height: 70px;	
+	background-color: #14669c;		
+}
+.right-dataBase li b i{
+	display: inline-block;
+	width: 44px;
+	height: 41px;	
+    margin-top: 15px;		
+}
+.right-dataBase li:nth-child(1) b i{
+	background: url('../img/dataBase/ioc1.png')no-repeat  center;	
+}
+.right-dataBase li:nth-child(2) b i{
+	background: url('../img/dataBase/ioc2.png')no-repeat  center;	
+}
+.right-dataBase li:nth-child(3) b i{
+	background: url('../img/dataBase/ioc3.png')no-repeat  center;	
+}
+.right-dataBase li:nth-child(4) b i{
+	background: url('../img/dataBase/ioc4.png')no-repeat  center;	
+}
+/**数据图*/
+.yx_map_alert,.bch_alert{
+    position: absolute;
+    top: 170px;
+    left: 300px;
+    width: 820px;
+    height: 300px !important;
+     background-color: #2c609d; 
+    text-align: center;
+    display: none;
+    box-shadow: 0px 4px 5px 1px rgba(0, 0, 0, 0.3);
+    z-index: 7;
+    padding: 0 !important;
+}
+.bch_alert{
+    width: 595px !important;
+    height: 150px !important;	
+}
+.bch_alert_xy{
+	display: block;
+}
+.highcharts-background {
+    fill: #2c609d;
+}
+.yx_map_alert .yx_details_close,.bch_close{
+    position: relative;
+    top: 0;
+    right: 0;
+}
+.yx_details_close,.bch_close {
+    float: right;
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 48px;
+    height: 48px;
+    background: url(../img/indexImg/home-map-tc-icon-cha.png)no-repeat 100% center;
+    background-size: 100% 100%;
+    border: none;
+    border-radius: 50%;
+}
+.integrated1{
+    position: absolute;
+    top: 170px;
+    left: 300px;
+    display: none;
+}
+.highcharts-credits{
+	display: none;
+}
+@media (max-width: 1366px){
+	.expert-content>div,.left-activity,.right-activity{
+		height: auto;	    
+	}
+	.left-activity,.right-activity,.right-dataBase{
+		height: 530px;	    
+	}
+	.right-dataBase li{
+    	margin: 45px auto auto auto;		
+	}
+	.right-activity li{
+		padding-left: 10px;
+	}
+}
+@media (min-width: 1921px){
+	body{
+		background-size: 100% 100%;	    
+	}
+}
+
+.yx_alert{
+    position: absolute;
+    left: 380px;
+    top: 222px;
+    display: none;
+    overflow: hidden;
+    width: 1160px;
+    height: 700px;
+    background-color: #1977a7;
+    box-shadow: 0px 0px 10px 0px
+    rgba(4, 0, 0, 0.5);
+    border-radius: 6px;
+    -webkit-transition: all 5s;
+    z-index: 1;
+}
+.yx_alert i{
+    display: inline-block;
+    width: 156px;
+    height: 157px;
+    background-size: 100% 100%;
+    position: relative;
+    top: -391px;
+    left: 424px;
+    cursor:pointer;
+}
+.yx_alert b.yx_video_close{
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background: url(../img/indexImg/home-map-tc-icon-cha.png)no-repeat 100% center;
+    background-size: 100% 100%;
+    position: relative;
+    top: 20px;
+    left: 1092px;
+    cursor:pointer;
+}

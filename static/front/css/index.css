@@ -1,0 +1,353 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background: url('../img/bg.png')no-repeat center;
+    zoom: 1;
+}
+/*头部*/
+.expert-nav{
+    overflow: hidden;
+    width: 100%;
+    height: 80px;
+    margin-bottom: 40px;
+}
+.navTit,.expert-nav ul.navList{
+    float: left;
+    overflow: hidden;
+    text-align: center;
+}
+.navTit{
+    width: 286px;   
+    height: 100%;
+    line-height: 73px;
+    background: url('../img/navTit.png')no-repeat center;    
+    background-size: 100% 100%;
+    font-family: Microsoft YaHei;
+    font-size: 24px;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 2px;
+    text-align: left;
+    padding-left: 29px;
+}
+.navTit a{
+     color: #afecff; 
+}
+ul.navList{
+    position: relative;
+    left: -20px;
+}
+ul.navList li{
+    position: relative;
+    float: left;
+    width: 195px;
+    height: 60px;
+    line-height: 55px;
+    background: url('../img/navBox.png')no-repeat center;    
+    background-size: 100% 100%; 
+}
+ul.navList li.active{
+    background: url('../img/navBoxShow.png')no-repeat center;    
+}
+ul.navList li:nth-child(1){
+    left: 5px;  
+}
+ul.navList li:nth-child(2){
+    left: -10px;    
+}
+ul.navList li:nth-child(3){
+    left: -25px;    
+}
+ul.navList li a{
+    font-family: Microsoft YaHei;
+    font-size: 24px;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 2px;
+    color: #afecff;
+}
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/ 
+::-webkit-scrollbar 
+{ 
+    border-radius: 5px;
+    width: 12px; 
+    height: 12px; 
+} 
+   
+/*定义滚动条轨道 内阴影+圆角*/ 
+::-webkit-scrollbar-track 
+{ 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 5px; 
+    background-color: #11223c; 
+} 
+   
+/*定义滑块 内阴影+圆角*/ 
+::-webkit-scrollbar-thumb 
+{ 
+    border-radius: 5px; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3); 
+    background-color: #afecff; 
+} 
+/*地图四角*/
+.mapWarp b{
+	position: absolute;
+	display: inline-block;
+	width: 30px;
+	height: 30px;	
+    border: 2px solid #9adadd;	
+}
+.mapWarp b.borderT{
+    top: 45px;
+    left: 3px;
+	border-bottom: none;
+	border-right: none;
+}
+.mapWarp b.borderB{
+    top: 45px;
+    right: 3px;
+	border-bottom: none;
+	border-left: none;	
+}
+.mapWarp b.borderL{
+    bottom: -18px;
+    left: 0;
+	border-right: none;
+	border-top: none;		
+}
+.mapWarp b.borderR{
+    bottom: -18px;
+    right: 3px;
+	border-top: none;
+	border-left: none;		
+}
+/*病虫害状态、控制*/
+.bchState,.bchControl{
+	overflow: hidden;
+	zoom: 1;
+    width: 100%;	
+}
+.bchState li,.bchControl li{
+    background: none !important;	
+    width: 93px !important;
+	height: 380px !important;
+	background-color: #182d4f !important;
+	margin: 0 10px 10px 0 !important;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;	
+    cursor: initial !important;      
+}
+.bchState li>p,.bchControl li>p{
+	width: 100%;
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+	background-color: #11223c;
+	border-radius: 6px 6px 0px 0px;	
+	font-family: Microsoft YaHei;
+	font-size: 15px;
+	letter-spacing: 1px;
+	color: #afecff;
+	background:url('../img/indexImg/zt-tit-bg-kuang.png')no-repeat 100% center;
+	margin: 0 !important;
+}
+.bchState li>div,.bchControl li>div{
+	width: 100%;
+	height: 300px;
+	background:url('../img/indexImg/zt-nr-bg-kuang.png')no-repeat 100% center;	
+	text-align: center;
+    padding-top: 120px;  	
+}
+.bchState li>div p,.bchControl li>div p{
+	margin: 0 !important;
+	color: #e0f4fc !important;
+}
+.bchState li>div p.nmber,.bchControl li>div p.nmber{
+	font-size: 17px !important;
+	font-weight: bold;
+	margin-bottom: 7px !important;	
+}
+.bchState li>div p.frequency,.bchControl li>div p.frequency{
+	
+	color: #5075a3 !important;
+}
+.bchControl li>div p.frequency{
+	font-size: 13px !important;
+}
+.bchControl li>div p.openColor,.bchState li>div p.openColor{
+	/*color: #e33938 !important;*/
+    color: #46ad4d !important;
+}
+.bchControl li>div p.openColor1,.bchState li>div p.openColor1{
+    color: #e33938 !important;
+}
+.bchState li>div p.statek{
+	color: #46ad4d !important;
+}
+.bchControl li>div p.single{
+    margin-top: 12px !important;	
+}
+.bchControl li>div .dataGraph{
+    width: 60px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    background-color: #0c5b8b;
+    border-radius: 3px;
+    color: #e0f4fc;
+    font-family: Microsoft YaHei;
+    font-size: 12px;
+    margin: 10px auto auto auto;
+    cursor: pointer;    
+	-webkit-user-select:none;/*文字不可选择*/
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;      
+    -webkit-transition: all .3s;
+}
+.bchControl li>div .dataGraphTow{
+	background-color: #afecff;
+	color: #07605e;
+}
+.dataGraph1{
+	margin-top: 13px !important;	
+}
+.bchControl li.controlTime>div{
+	padding-top: 106px;
+}
+.bchControl li.controlTime>div p{
+	margin-bottom: 0 !important;
+}
+.bchControl li>div p.minSize{
+	font-size: 12px !important;
+	font-family: Microsoft YaHei;
+}
+.bchSwitch{	
+	width: 50px;
+	height: 18px;	
+	margin: 14px auto auto auto;
+	text-align: center;	
+-webkit-transition: all .3s;	
+}
+.bchSwitch .switchBtn{
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: #626a75;
+	border-radius: 9px;	
+    cursor: pointer;	  		
+}
+.bchSwitch b{
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+    position: relative;
+    top: -3px;    	   
+}
+.btnopen b{
+	background:url('../img/indexImg/yuan-kai.png')no-repeat 100% center;		
+    float: right;	
+}
+.btncolse b{
+	background:url('../img/indexImg/yuan-guan.png')no-repeat 100% center;		
+    float: left;	
+}
+/*.bchSwitch .switchBtn{
+	display: none;
+}*/
+.bchSwitch .btnopen{
+	display: block;
+}
+.colseSwitch>div{
+	display: none !important;
+}
+.colseSwitch div.btncolse{
+	display: block !important;
+}
+/*数据图*/
+.yx_map_alert,.bch_alert{
+    position: absolute;
+    top: 182px;
+    left: 416px;
+    width: 820px;
+    height: 320px !important;
+    background-color: #2c609d;
+    text-align: center;
+    display: none;
+    box-shadow: 0px 4px 5px 1px rgba(0, 0, 0, 0.3);
+    z-index: 7;
+    padding-top: 20px;
+}
+.bch_alert{
+    width: 595px !important;
+    height: 150px !important;	
+}
+.bch_alert_xy{
+	display: block;
+    height: 170px!important;
+    left: 640px!important;
+}
+.highcharts-background {
+    fill: #2c609d;
+}
+.yx_map_alert .yx_details_close,.bch_close{
+    position: relative;
+    top: 0;
+    right: 0;
+}
+.yx_details_close,.bch_close {
+    position: absolute!important;
+    top: 5px!important;
+    right: 5px!important;
+    z-index: 111111111;
+    width: 30px;
+    height: 30px;
+    background: url(../img/indexImg/home-map-tc-icon-cha.png)no-repeat 100% center;
+    background-size: 100% 100%;
+    border: none;
+    border-radius: 50%;
+}
+.integrated1{
+    position: absolute;
+    top: 170px;
+    left: 300px;
+    display: none;
+}
+.highcharts-credits{
+	display: none;
+}
+.layui-inline{
+	width: 100%;
+	overflow: hidden;
+}
+#test4,#test5{
+    background-color: #182d4f;
+	color: #e0f4fc !important;
+    border: none;
+    text-align: center;
+    width: 100%;
+    font-size: 14px;	
+}
+input::-webkit-input-placeholder {
+        /* placeholder颜色  */
+         color: #e0f4fc;
+        /* placeholder字体大小  */
+         font-size: 12px;
+     }
+@media (max-width: 1366px){
+	.pest>.clearfix,.huanjing,.dy_ksh{
+		padding-left: 47px;
+	}
+	.bchState li, .bchControl li {
+    	margin: 0 20px 10px 0 !important;
+	}
+	.equipment .videoList li{
+		margin-bottom: 15px;
+	}
+	.mapDetails>em{
+		width: 53% !important;
+	    margin-top: 18px !important;	
+	}
+}     

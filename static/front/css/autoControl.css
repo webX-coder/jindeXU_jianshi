@@ -1,0 +1,238 @@
+    ::-webkit-scrollbar {
+    	width: 10px; /*对垂直流动条有效*/
+    	height: 10px; /*对水平流动条有效*/
+    }
+    /*定义滚动条的轨道颜色、内阴影及圆角*/
+    ::-webkit-scrollbar-track{
+    	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    	background-color: rosybrown;
+    	border-radius: 3px;
+    }
+    /*定义滑块颜色、内阴影及圆角*/
+    ::-webkit-scrollbar-thumb{
+    	border-radius: 7px;
+    	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    	background-color: #E8E8E8;
+    }
+    /*定义两端按钮的样式*/
+    ::-webkit-scrollbar-button {
+    	background-color:cyan;
+    }
+    /*定义右下角汇合处的样式*/
+    ::-webkit-scrollbar-corner {
+    	background:khaki;
+    }
+    .modal-content{
+    	background-color: #1a57e0 !important;
+    }
+    .controlTit{
+    	width: 100%;
+    	height: 120px;
+    	line-height: 120px;
+    	text-align: center;
+    	background-image: linear-gradient(90deg, #1a57e0 0%, #255fe8 100%),linear-gradient(#000000, #000000);
+    	background-blend-mode: normal, normal;
+    	border: solid 1px #1448be;
+    	font-family: Microsoft YaHei;
+    	font-size: 30px;
+    	color: #c8e2ff;
+    }
+    .controlContent{
+    	width: 1074px;
+    	height: auto;
+    	margin: auto;
+    	overflow: hidden;
+    }
+    .tit{
+    	width: auto;
+    	height: 23px;
+    	line-height: 23px;
+    	font-family: Microsoft YaHei;
+    	font-size: 24px;
+    	color: #c8e2ff;	
+    	margin: 30px 0 20px 0;
+    }
+    .surface,.surface ul{
+    	width: 100%;
+    	height: auto;
+    	overflow: hidden;
+    	zoom: 1;
+    }
+    .surface>ul>li{
+    	float: left;
+    	width: 100%;
+    	height: 80px;
+    	line-height: 80px;
+    	border: 1px solid #fff;
+    	border-bottom: none;
+    }
+    .surface>ul>li:last-child{
+    	border-bottom: 1px solid #fff;
+    }
+    .surface>ul li>div{
+    	float: left;
+    	height: 100%;
+    	text-align: center;
+    	font-family: Microsoft YaHei;
+    	font-size: 20px;
+    	color: #ffffff;	
+    	border-right: 1px solid #fff;
+    }
+    .surface>ul li>div.surface-bnt{
+    	border-right: none;	
+    }
+    .ioc1{
+    	background: url('../img/ioc1.png') no-repeat center;
+    }
+    .ioc2{
+    	background: url('../img/ioc2.png') no-repeat center;
+    }
+    .ioc3{
+    	background: url('../img/ioc3.png') no-repeat center;
+    }
+    .ioc4{
+    	background: url('../img/ioc4.png') no-repeat center;
+    }
+    .surface-ioc{
+    	width: 214px;
+    }
+    .surface-name{
+    	position: relative;
+    	width: 568px;
+    	cursor: pointer;	
+    	-webkit-transition: all .3s;	
+    }
+    .surface-name:hover{
+    	color: #d5d3d3;
+    }
+    .surface-bnt{
+    	position: relative;
+    	width: 290px;
+    	line-height: 90px;	
+    }
+    .surface-bnt .switch,.surface-bnt .switch-colse{
+    	display: inline-block;
+    	width: 72px;
+    	height: 26px;
+    	line-height: 26px;
+    	border-radius: 13px;
+    	margin: auto;
+    	cursor:pointer;
+    	overflow: hidden;
+    	text-align: center;
+    	font-family: Microsoft YaHei;
+    	font-size: 16px;
+    	-webkit-transition: all .4s;	
+    }
+    .surface-bnt .switch{
+    	background-color: #0b3494;	
+    }
+    .surface-bnt .switch-colse{
+    	background-color: #bfddff;	
+    }
+    .surface-bnt i{
+    	position: relative;
+    	top: 2px;
+    	display: inline-block;
+    	width: 17px;
+    	height: 16px;
+    	border-radius: 50%;
+    }
+    .switch>div{
+    	display: none;
+    	-webkit-user-select: none; /* Chrome/Safari/Opera 禁止选择文字*/
+    	-moz-user-select: none; /* Firefox */
+    	-ms-user-select: none; /* Internet Explorer/Edge */
+    	-webkit-transition: all .4s;	
+    }
+    .switch>div.open{
+    	display: block;
+    }
+    .switch-colse>div.open{
+    	display: none !important;		
+    }
+    .switch-colse>div.btClose{
+    	display: block !important;		
+    }
+    .open i{
+    	background-color: #bfddff;	
+    }
+    .switch-colse>div.btClose i{
+    	background-color: #3392ff;		
+    	margin-right: 16px;
+    }
+    .open span{
+    	margin-right: 16px;
+    }
+    .btClose span{
+    	color: #0b3494;
+    }
+    .surface-btn{
+    	border: none;
+    	position: absolute;
+    	right: 30px;
+    	top: 30px;
+    	width: 20px;
+    	height: 21px;
+    	line-height: 10px;
+    	font-size: 30px;
+    	background-color: transparent;
+    	font-weight: bold; 
+    	color: #000;       
+    }
+    /*二级下拉*/
+    .surface-ul{
+    	position: absolute;
+    	left: -1px;
+    	top: 80px;
+    	display: none;
+    	width: 860px !important;	
+    	-webkit-transition: all .4s;	
+    }
+    .surface-ul .surface-name{
+    	font-size: 16px !important;
+    }
+    .surface-ul  .switch{
+    	position: relative;
+    	left: 7px;	
+    }
+/*.surface-ioc .ioc1{
+	display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-size: 100% 100%;
+    position: relative;
+    top: 5px;
+    border-radius: 50%;
+    }*/
+    .surface-ul li{
+    	float: left;
+    	width: 100%;
+    	height: 40px !important;
+    	line-height: 40px !important;
+    	border: 1px solid #fff;
+    	border-bottom: none;
+    }
+    .surface-ul li:first-child{
+    	border-top: none;
+    }
+    .surface-ul li .surface-bnt{
+    	width: 275px;
+    	line-height: 50px;	  
+    }
+    .surface>ul li.child_4 .surface-ul li:last-child{
+    	height: 39px !important;
+    	border-bottom: 1px solid #fff !important;	
+    }
+    .closeSurface-btn{
+    	border: none;
+    	position: absolute;
+    	right: 5px;
+    	top: 5px;
+    	width: 20px;
+    	height: 21px;
+    	line-height: 10px;
+    	font-size: 32px;
+    	background-color: transparent;
+    	font-weight: bold;	
+    }

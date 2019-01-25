@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<style type="text/css">
+		body {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			font-family: "微软雅黑";
+		}
+
+		#allmap {
+			height: 800px;
+			width: 1000px;
+			float: left
+		}
+
+		.anchorBL {
+			display: none;
+		}
+	</style>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=b00UGjBCjsmxrkrmugiWFdUuAjYLva1c"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+</head>
+
+<body>
+	<div><span onclick="onc(1)">物联网1</span><span onclick="onc(2)">物联网2</span><span onclick="onc(3)">物联网3</span><span
+		 onclick="onc(4)">物联网4</span></div>
+	<div id="allmap"></div>
+	<div style="float:left ">
+		<h1 id="aaaaa">aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h1>
+	</div>
+</body>
+
+</html>
+<script type="text/javascript">
+	var map = new BMap.Map("allmap", { mapType: BMAP_HYBRID_MAP });
+	$.getJSON('custom_map_config1.json', function (data) {
+		map.setMapStyleV2({ styleJson: data });
+	});
+	// map.setMapStyle({style:'darkgreen'});
+	var point = new BMap.Point(109.892887, 30.510033);
+	map.centerAndZoom(point, 11);
+	map.enableScrollWheelZoom();
+	map.addControl(new BMap.MapTypeControl({ mapTypes: [BMAP_NORMAL_MAP, BMAP_HYBRID_MAP] }));
+	var bdary = new BMap.Boundary().get("建始", function (rs) {
+		//获取行政区域  
+		var count = rs.boundaries.length; //行政区域的点有多少个
+		var pointArray = [];
+		for (var i = 0; i < count; i++) {
+			var ply = new BMap.Polygon(rs.boundaries[i], { strokeWeight: 2, strokeOpacity: 0.8, strokeColor: "#ff0000", fillOpacity: 0.1 }); //建立多边形覆盖物
+			map.addOverlay(ply);  //添加覆盖物
+			pointArray = pointArray.concat(ply.getPath());
+		}
+		// map.setViewport(pointArray);    //调整视野                
+	});
+	var iconMap = [{ "name": "点1", "lng": 109.80435, "lat": 30.73081 },
+	{ "name": "点2", "lng": 109.984873, "lat": 30.649321 },
+	{ "name": "点3", "lng": 110.023968, "lat": 30.415401 },
+	{ "name": "点4", "lng": 109.771005, "lat": 30.682124 },
+	{ "name": "点5", "lng": 109.771005, "lat": 30.802304 }];
+	var iconMap1 = [{ "name": "点1", "sw": 109.904873, "lat": 30.71081 },
+	{ "name": "点2", "lng": 109.904873, "lat": 30.619321 },
+	{ "name": "点3", "lng": 110.013968, "lat": 30.425401 },
+	{ "name": "点4", "lng": 109.721005, "lat": 30.632124 },
+	{ "name": "点5", "lng": 110.013968, "lat": 30.802304 }];
+	var personMarker = [];
+	function onc(id) {
+		clearAll()
+		if (id == 1) {
+			for (var i = 0; i < iconMap1.length; i++) {
+				var point = new BMap.Point(iconMap1[i].lng, iconMap1[i].lat);
+				var myIcon = new BMap.Icon(
+					'static/front/img/map-small-dian.png', // 百度图片
+					new BMap.Size(62, 62), // 视窗大小
+					{
+						imageSize: new BMap.Size(62, 62), // 引用图片实际大小
+						imageOffset: new BMap.Size(0, 0)  // 图片相对视窗的偏移
+					}
+				);
+				var marker = new BMap.Marker(point, { icon: myIcon });
+				addMarker(marker, iconMap1[i].name);
+			}
+		}
+		if (id == 2) {
+			for (var i = 0; i < iconMap.length; i++) {
+				var point = new BMap.Point(iconMap[i].lng, iconMap[i].lat);
+				var myIcon = new BMap.Icon(
+					'static/front/img/map-small-dian.png', // 百度图片
+					new BMap.Size(62, 62), // 视窗大小
+					{
+						imageSize: new BMap.Size(62, 62), // 引用图片实际大小
+						imageOffset: new BMap.Size(0, 0)  // 图片相对视窗的偏移
+					}
+				);
+				var marker = new BMap.Marker(point, { icon: myIcon });
+				addMarker(marker, iconMap[i].name);
+			}
+		}
+		if (id == 3) {
+			for (var i = 0; i < iconMap1.length; i++) {
+				var point = new BMap.Point(iconMap1[i].lng, iconMap1[i].lat);
+				var myIcon = new BMap.Icon(
+					'static/front/img/map-small-dian.png', // 百度图片
+					new BMap.Size(62, 62), // 视窗大小
+					{
+						imageSize: new BMap.Size(62, 62), // 引用图片实际大小
+						imageOffset: new BMap.Size(0, 0)  // 图片相对视窗的偏移
+					}
+				);
+				var marker = new BMap.Marker(point, { icon: myIcon });
+				addMarker(marker, iconMap1[i].name);
+			}
+		}
+		if (id == 4) {
+			for (var i = 0; i < iconMap.length; i++) {
+				var point = new BMap.Point(iconMap[i].lng, iconMap[i].lat);
+				var myIcon = new BMap.Icon(
+					'static/front/img/map-small-dian.png', // 百度图片
+					new BMap.Size(62, 62), // 视窗大小
+					{
+						imageSize: new BMap.Size(62, 62), // 引用图片实际大小
+						imageOffset: new BMap.Size(0, 0)  // 图片相对视窗的偏移
+					}
+				);
+				var marker = new BMap.Marker(point, { icon: myIcon });
+				addMarker(marker, iconMap[i].name);
+			}
+		}
+	}
+
+	for (var i = 0; i < iconMap.length; i++) {
+		var point = new BMap.Point(iconMap[i].lng, iconMap[i].lat);
+		var myIcon = new BMap.Icon(
+			'static/front/img/map-small-dian.png', // 百度图片
+			new BMap.Size(62, 62), // 视窗大小
+			{
+				imageSize: new BMap.Size(62, 62), // 引用图片实际大小
+				imageOffset: new BMap.Size(0, 0)  // 图片相对视窗的偏移
+			}
+		);
+		var marker = new BMap.Marker(point, { icon: myIcon });
+		addMarker(marker, iconMap[i].name);
+	}
+	// 编写自定义函数,创建标注
+	function addMarker(marker, name) {
+		var marker = marker;
+		var infoWindow = new BMap.InfoWindow(sContent(name));  // 创建信息窗口对象
+		marker.addEventListener("mouseover", function () {
+			this.openInfoWindow(new BMap.InfoWindow(name));
+			//图片加载完毕重绘infowindow
+			// document.getElementById('imgDemo').onload = function () {
+			// 	infoWindow.redraw();   //防止在网速较慢，图片未加载时，生成的信息框高度比图片的总高度小，导致图片部分被隐藏
+			// }
+		});
+		marker.addEventListener("mouseout", function () {
+			this.closeInfoWindow();
+		});
+		marker.addEventListener("click", function () {
+			$("#aaaaa").html(name);
+		});
+
+		map.addOverlay(marker);
+		personMarker.push(marker);
+	}
+	//获取覆盖物位置
+	function attribute(e) {
+		var p = e.target;
+		alert("marker的位置是" + p.getPosition().lng + "," + p.getPosition().lat);
+	}
+
+	function sContent(name) {
+		var sContent = "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>" + name + "</h4></div>";
+		return sContent;
+	}
+	function clearAll() {
+		for (var i = 0; i < personMarker.length; i++) {
+			map.removeOverlay(personMarker[i]);
+		}
+		personMarker = [];
+	}
+
+	//单击获取点击的经纬度
+	// map.addEventListener("click", function (e) {
+	// 	alert(e.point.lng + "," + e.point.lat);
+	// });
+</script>

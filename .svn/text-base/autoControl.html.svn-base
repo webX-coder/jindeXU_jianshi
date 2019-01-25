@@ -1,0 +1,100 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<style type="text/css">
+	body, html{width: 80%;height: 96%;margin:0;font-family:"微软雅黑";}
+	#allmap{height:100%;width:100%;}
+	#reset{width:100%; font-size:14px; position: absolute; bottom: 80px;left: 80px;}
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=xvfNx3G4xcGcQHuow0FZYg3fBD39VYLE"></script>
+<title>首页</title>
+</head>
+<body>
+	<div id="allmap"></div>
+	<div id="reset">
+		<input type="button" value="重置" onclick="theLocation()" />
+	</div>
+</body>
+</html>
+<script src="static/front/plugins/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+	// 百度地图API功能
+	var map = new BMap.Map("allmap");
+	var point = new BMap.Point(116.331398,39.897445);
+	map.centerAndZoom('建始县',15);//初始化时，即可设置中心点和地图缩放级别
+	map.enableScrollWheelZoom(true);
+	map.enableInertialDragging();
+	map.enableContinuousZoom();
+	var size = new BMap.Size(10, 20);
+	map.addControl(
+		new BMap.MapTypeControl({
+			mapTypes:[
+			BMAP_NORMAL_MAP,
+			BMAP_HYBRID_MAP
+			]}));
+	//重置地图显示位置
+	function theLocation(){
+		map.centerAndZoom('建始县',11);
+	}
+	//标注行政区域
+	function getBoundary(){       
+		var bdary = new BMap.Boundary();
+		bdary.get("建始县", function(rs){       //获取行政区域
+			/*map.clearOverlays();   */     //清除地图覆盖物       
+			var count = rs.boundaries.length; //行政区域的点有多少个
+			if (count === 0) {
+				alert('未能获取当前输入行政区域');
+				return ;
+			}
+			var pointArray = [];
+			for (var i = 0; i < count; i++) {
+				var ply = new BMap.Polygon(rs.boundaries[i], {strokeWeight: 2, strokeOpacity: 0.8,strokeColor: "#ff0000", fillOpacity: 0.1}); //建立多边形覆盖物
+				map.addOverlay(ply);  //添加覆盖物
+				pointArray = pointArray.concat(ply.getPath());
+			}    
+			map.setViewport(pointArray);    //调整视野  
+		});   
+	}
+	setTimeout(function(){
+		getBoundary();
+		addlabel()
+	}, 0);
+
+	function addlabel() {
+		map.clearOverlays();        //清除地图覆盖物 
+		var pointArray = [
+		new BMap.Point(109.746366, 30.686600),
+		new BMap.Point(109.961529, 30.551536),
+		new BMap.Point(110.054774, 30.329016)];
+		var optsArray = [{},{},{}];
+		var labelArray = [];
+		var contentArray = [
+		"1",
+		"2",
+		"3"];
+		for(var i = 0;i < pointArray.length; i++) {
+			optsArray[i].position = pointArray[i];
+			labelArray[i] = new BMap.Label(contentArray[i],optsArray[i]);
+			labelArray[i].setStyle({
+				color : "red",
+				fontSize : "12px",
+				height : "30px",
+				width : "30px",
+				lineHeight : "20px",
+				fontFamily:"微软雅黑",
+				background:'url(static/front/img/data-center/yuan-03.png) no-repeat 0 0'
+			});
+			map.addOverlay(labelArray[i]);
+			labelArray[i].addEventListener("click", function () {
+				$(this).hide()
+			 alert(213)
+			});
+		}	  
+	}
+	
+
+	/*$('.BMapLabel').click(function(){
+		alert(213)
+	})*/
+</script>

@@ -1,0 +1,19 @@
+{
+	"msg": "success",
+	"code": 0,
+	"data": {
+		"id": 11,
+		"deviceSerial": "C11790486",
+		"channelNo": 3,
+		"liveAddress": "http://hls.open.ys7.com/openlive/4dc5f210ea4146ab9fe5ff8d74a3220a.m3u8",
+		"hdAddress": "http://hls.open.ys7.com/openlive/4dc5f210ea4146ab9fe5ff8d74a3220a.hd.m3u8",
+		"rtmp": "rtmp://rtmp.open.ys7.com/openlive/4dc5f210ea4146ab9fe5ff8d74a3220a",
+		"rtmpHd": "rtmp://rtmp.open.ys7.com/openlive/4dc5f210ea4146ab9fe5ff8d74a3220a.hd",
+		"status": 1,
+		"exception": 0,
+		"img": "http://xxh-01.oss-cn-shenzhen.aliyuncs.com/xxh_zs/image/livevideo/20180720/81614b55df3546db9d108f1dc221078a.jpg",
+		"livename": "茶发局3",
+		"switchState": 1,
+		"isActive": 1
+	}
+}

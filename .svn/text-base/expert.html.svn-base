@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>专家</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="static/front/css/main.css" />
+	<link rel="stylesheet" href="static/front/css/expert.css" />
+    <style>
+        .yx_alert h3{
+            width: 432px;
+            height: 24px;
+            font-family: MicrosoftYaHei-Bold;
+            font-size: 24px;
+            font-weight: normal;
+            font-stretch: normal;
+            line-height: 24px;
+            letter-spacing: 0px;
+            color: #ffffff;
+            margin: 0 auto;
+            text-align: center;
+            overflow: hidden;
+        }
+        .yx_alert p{
+            width: 360px;
+            height: 16px;
+            margin: 0 auto;
+            margin-top: 27px;
+            font-family: Microsoft YaHei;
+            font-size: 14px;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0px;
+            color: #afecff;
+        }
+        .yx_alert em{
+            display: block;
+            width: 1101px;
+            height: 188px;
+            margin: 15px auto 0 auto;
+            text-indent: 30px;
+            font-family: MicrosoftYaHei;
+            font-size: 16px;
+            font-weight: normal;
+            font-stretch: normal;
+            line-height: 30px;
+            letter-spacing: 0px;
+            color: #ffffff;
+            overflow: hidden;
+        }
+        .yx_alert span{
+            margin-left: 20px;
+        }
+        .yx_alert img{
+            display: block;
+            margin: 30px auto 0 auto;
+            width: 582px;
+            height: 298px;
+        }
+        .navTit a{
+        	color: #afecff;
+        }        
+    </style>
+</head>
+<body>
+	<div class="expert-nav">
+		<div class="navTit"><a href="index.html">物联网云平台</a></div>
+		<ul class="navList">
+			<li><a href="index.html">首页</a></li>
+			<li class="active"><a href="###">专家</a></li>
+			<li><a href="dataBase.html">数据库</a></li>
+		</ul>
+	</div>
+	<div class="expert-content">
+		<div class="content-left">
+            <div class="yx_alert">
+                <b class="yx_video_close" onclick=videoClose()></b>
+                <h3>全市柑橘产业联盟现场培训会在我县举行</h3>
+                <p>发布时间：2017-07-14<span>来源： 厅计财处 英山县农业局</span></p>
+                <div style="width: 1100px;height: 1px;background-color: #61afd1;margin:0 auto;margin-top: 30px;"></div>
+                <em>表彰大会由阳新县农业局、茶园畈村联合组织召开，表彰大会召开之前，阳新县委副书记蔡寿益作出了关于开展精神扶贫工作的重要指示，提出了要通过一系列活动，为表彰大会由英山县农业局、茶园畈村联合组织召开，表彰大会召开之前，英山县委副书记蔡寿益作出了关于开展精神扶贫工作的重要指示，提出了要通过一系列活动，为贫困户立榜样、树标杆，变“要我脱贫”为“我要脱贫”,引导贫困户用自己的双手摘掉贫困帽。英山县农业局党组书记、局长杜典兵、正局级总工程师尹益民、方家咀乡党委书记段水平、乡长邬鹏程等领导出席了表彰大会贫困户立榜样、树标杆，变“要我脱贫”为“我要脱贫”， 引导贫困户用自己的双手摘掉贫困帽。英山县农业局党组书记、局长杜典兵、正局级总工程师尹益民、方家咀乡党委书记段水平、乡长邬鹏程等领导出席了表彰大会。</em>
+                <img src="static/front/img/expert/zj1.png" alt="">
+            </div>
+			<p class="contentTit">决策评估</p>
+			<ul class="left-activity">
+				<li class="active" typeId="1">
+					<b class="iocLeft"></b>
+					<div class="activityTit">
+						<p title="省绿办来我县核查绿色食品认证">省绿办来我县核查绿色食品认证!</p>
+						<p>时间：2018/4/12</p>
+					</div>
+					<b class="iocRight"></b>
+				</li>
+				<li typeId="2">
+					<b class="iocLeft"></b>
+					<div class="activityTit">
+						<p title="市科技专家来洋港指导稻虾养殖">市科技专家来洋港指导稻虾养殖!</p>
+						<p>时间：2018/5/16</p>
+					</div>
+					<b class="iocRight"></b>
+				</li>
+				<li typeId="3">
+					<b class="iocLeft"></b>
+					<div class="activityTit">
+						<p title="金色钟山助推金色未来">金色钟山助推金色未来!</p>
+						<p>时间：2018/6/10</p>
+					</div>
+					<b class="iocRight"></b>
+				</li>		
+				<li typeId="4">
+					<b class="iocLeft"></b>
+					<div class="activityTit">
+						<p title="我县再生稻“一种两收”栽培模式取得新突破">我县再生稻“一种两收”栽培模式取得新突破!</p>
+						<p>时间：2018/8/19</p>
+					</div>
+					<b class="iocRight"></b>
+				</li>
+				<li typeId="5">
+					<b class="iocLeft"></b>
+					<div class="activityTit">
+						<p title="县种子管理局组织玉米品种展示观摩会——玉米地头观摩选良种">县种子管理局组织玉米品种展示观摩会——玉米地头观摩选良种!</p>
+						<p>时间：2018/9/11</p>
+					</div>
+					<b class="iocRight"></b>
+				</li>
+				<li typeId="6">
+					<b class="iocLeft"></b>
+					<div class="activityTit">
+						<p title="扎实开展新型职业农民培育跟踪服务">扎实开展新型职业农民培育跟踪服务!</p>
+						<p>时间：2019/1/10</p>
+					</div>
+					<b class="iocRight"></b>
+				</li>
+				<!--<li>
+					<b class="iocLeft"></b>
+					<div class="activityTit">
+						<p title="省绿办来我县核查绿色食品认证食品认证食品认证食品认证食品认证">省绿办来我县核查绿色食品认证食品认证食品认证食品认证食品认证!</p>
+						<p>时间：2018/6/10</p>
+					</div>
+					<b class="iocRight"></b>
+				</li>
+				<li>
+					<b class="iocLeft"></b>
+					<div class="activityTit">
+						<p>省绿办来我县核查绿色食品认证食品认证食品认证食品认证食品认证!</p>
+						<p>时间：2018/6/10</p>
+					</div>
+					<b class="iocRight"></b>
+				</li>	-->
+			</ul>
+		</div>
+		<div class="content-right">
+			<p class="contentTit">专家库</p>	
+			<ul class="right-activity">
+				<li class="active">
+					<div class="rightImg"><img src="static/front/img/expert/zj1.png" alt="" /></div>
+					<div class="rightTxt">
+						<p>姓名：<span title="张峰">张峰</span></p>
+						<p>乡镇：<span title="龙坪乡">龙坪乡</span></p>
+						<p>联系电话：<span title="13524026723">13524026723</span></p>
+						<p>擅长领域：<span title="茶叶、畜牧养殖">茶叶、畜牧养殖</span></p>
+					</div>
+				</li>
+				<li>
+					<div class="rightImg"><img src="static/front/img/expert/1.png" alt="" /></div>
+					<div class="rightTxt">
+						<p>姓名：<span title="王文杰">王文杰</span></p>
+						<p>乡镇：<span title="红岩寺镇">红岩寺镇</span></p>
+						<p>联系电话：<span title="18781069485">18781069485</span></p>
+						<p>擅长领域：<span title="茶叶、畜牧养殖">茶叶、畜牧养殖</span></p>
+					</div>					
+				</li>
+				<li>
+					<div class="rightImg"><img src="static/front/img/expert/2.png" alt="" /></div>
+					<div class="rightTxt">
+						<p>姓名：<span title="王近山">王近山</span></p>
+						<p>乡镇：<span title="三里乡">三里乡</span></p>
+						<p>联系电话：<span title="13217280136">13217280136</span></p>
+						<p>擅长领域：<span title="茶叶、畜牧养殖">茶叶、畜牧养殖</span></p>
+					</div>					
+				</li>
+				<li>
+					<div class="rightImg"><img src="static/front/img/expert/4.png" alt="" /></div>
+					<div class="rightTxt">
+						<p>姓名：<span title="钱小森">钱小森</span></p>
+						<p>乡镇：<span title="景阳镇">景阳镇</span></p>
+						<p>联系电话：<span title="18056920523">18056920523</span></p>
+						<p>擅长领域：<span title="茶叶、畜牧养殖">茶叶、畜牧养殖</span></p>
+					</div>					
+				</li>				
+			</ul>			
+		</div>
+	</div>
+</body>
+
+</html>
+<script src="static/front/plugins/jquery-3.3.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<!-- <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script> -->
+<script>
+    function html(item){
+        return'<b class="yx_video_close" onclick=videoClose()></b>'+
+            '<h3>'+item.name+'</h3>'+
+            '<p>发布时间：'+item.time+'<span>来源： '+item.source+'</span></p>'+
+        '<div style="width: 1100px;height: 1px;background-color: #61afd1;margin:0 auto;margin-top: 30px;"></div>'+
+            '<em>'+item.briefIntro+'</em>'+
+        '<img src="'+item.img+'" alt="">'
+    }
+	$(".left-activity li").click(function(){
+		$(this).addClass("active").siblings().removeClass("active");
+		var _this = $(this)
+        $(".yx_alert").show();
+        $.getJSON('static/front/data/expert.json', function (data) {
+                data.data.forEach(function(item,index){
+                    if(item.id==_this.attr('typeId')){
+                        $('.yx_alert').html(html(item))
+                    }
+                })
+        });
+	})
+	$(".right-activity li").click(function(){
+		$(this).addClass("active").siblings().removeClass("active");		
+	})
+    function videoClose() {
+        $(".yx_alert").hide();
+    }
+</script>
